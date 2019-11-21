@@ -5,10 +5,6 @@
 # Approximate Nearest Neighbors Oh Yeah (ANNOY)
 
 
-## Group members: 
-### Kristian Stavad, Lasse Hede Juul Sørensen, Rasmus Simmelsgaard Hye
-
-
 ## Course:
 ### Social Data Science 2019 - M3: Deep Learning - Portfolio
 
@@ -27,12 +23,12 @@ Out of a set of _n_ instances _P = {p1, ..., pn}_ in some metric space _X_ the n
 ![alt_text]( "image_tooltip")
 The idea behind the approximate nearest neighbor search is to speed up the computation of the nearest neighbors, the exact algorithm can not be improved. The only way to speed up the computation is to allow errors[^1]. 
 
-ANNOY (Approximate Nearest Neighbors Oh Yeah) is an algorithm based on random projections and trees. It was developed by Erik Bernhardsson in 2015 working at that time at Spotify. ANNOY is designed to search in date sets up to 100 to 1000 dense dimensions. To compute the nearest neighbors it is splitting the set of points into half and is doing this recursively until each set is having _k_ items. Usually _k_ should be around 100 _(figuren nedenfor)_. 
+ANNOY (Approximate Nearest Neighbors Oh Yeah) is an algorithm based on random projections and trees. It was developed by Erik Bernhardsson in 2015 working at that time at Spotify. ANNOY is designed to search in date sets up to 100 to 1000 dense dimensions. To compute the nearest neighbors it is splitting the set of points into half and is doing this recursively until each set is having _k_ items. Usually _k_ should be around 100 _(see figure below)_. 
 
 
 
 
-
+![alt_text]( "image_tooltip")
 An approximate nearest neighbors search algorithm is allowed to return points, whose distance from the query is at most _c_ times the distance from the query to its nearest points.
 
 The appeal of this approach is that, in many cases, an approximate nearest neighbors is almost as good as the exact one. In particular, if the distance measure accurately captures the notion of user quality, then small differences in the distance should not matter.
